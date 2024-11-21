@@ -12,3 +12,5 @@ def test_display_unique_values():
     
     assert isinstance(unique_values, dict), "The result should be a dictionary"
     assert 'Sex' in unique_values and 'Embarked' in unique_values, "Both categorical features should be in the result"
+    assert unique_values['Sex'] == ['male', 'female'], "Unique values for 'Sex' should be ['male', 'female']"
+
