@@ -11,7 +11,6 @@ def test_create_summary_table():
     
     summary_df = create_summary_table(mock_df)
     
-    assert 'Feature Name' in summary_df.columns, f"Summary should include 'Feature Name'. Found columns: {summary_df.columns.tolist()}"
-    assert 'Data Type' in summary_df.columns, f"Summary should include 'Data Type'. Found columns: {summary_df.columns.tolist()}"
-    assert 'Has Missing Values?' in summary_df.columns, f"Summary should include 'Has Missing Values?'. Found columns: {summary_df.columns.tolist()}"
-    assert 'Number of Unique Values' in summary_df.columns, f"Summary should include 'Number of Unique Values'. Found columns: {summary_df.columns.tolist()}"
+    expected_columns = ['Feature Name', 'Data Type', 'Number of Unique Values', 'Has Missing Values?']
+    assert all(col in summary_df.columns for col in expected_columns), "Summary table is missing expected columns"
+    assert summary_df.loc[summary_df['Feature Name'] == 'Age', 'Has Missing Values?'].values[0] == True, "Age should have missing values"
