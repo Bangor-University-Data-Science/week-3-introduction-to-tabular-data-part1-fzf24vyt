@@ -1,5 +1,5 @@
 from titanic_analysis.numerical_df import get_numerical_df
-import pandas as pd
+import pandas as pd 
 
 def test_get_numerical_df():
     # Mock a DataFrame
