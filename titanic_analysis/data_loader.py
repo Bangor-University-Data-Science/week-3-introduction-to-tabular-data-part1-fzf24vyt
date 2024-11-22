@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd 
 
 def load_titanic_data(filepath: str) -> pd.DataFrame:
     """
