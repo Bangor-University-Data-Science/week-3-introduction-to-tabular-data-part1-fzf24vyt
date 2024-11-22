@@ -1,5 +1,5 @@
 def display_unique_values(df, categorical_features):
-    """
+    """ 
     Displays unique values for each categorical feature in the DataFrame.
 
     Args:
