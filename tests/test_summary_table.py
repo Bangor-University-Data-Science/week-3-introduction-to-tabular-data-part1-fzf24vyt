@@ -1,4 +1,4 @@
-from titanic_analysis.summary_table import create_summary_table
+from titanic_analysis.summary_table import create_summary_table 
 import pandas as pd
 
 def test_create_summary_table():
